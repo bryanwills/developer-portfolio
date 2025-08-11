@@ -17,7 +17,7 @@ export default function Experience() {
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
             Experience
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg-xl text-muted-foreground max-w-2xl mx-auto">
             My professional journey and achievements in software development
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function Experience() {
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-base-lg text-muted-foreground leading-relaxed">
                   {exp.description}
                 </p>
 

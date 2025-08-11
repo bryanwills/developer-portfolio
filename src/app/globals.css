@@ -62,4 +62,20 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Custom text sizes for better readability */
+  .text-base-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .text-lg-xl {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  .text-xl-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

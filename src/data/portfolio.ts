@@ -21,39 +21,57 @@ export const portfolio: Portfolio = {
 
   projects: [
     {
-      name: 'Sparta Mortgage Platform',
+      name: 'MealForge - Recipe Management App',
       description:
-        'Led the complete migration and redesign of Sparta Mortgage\'s web platform from Wix to a modern React-based solution. Implemented responsive design, improved performance by 40%, and enhanced user experience with intuitive navigation and modern UI components.',
-      stack: ['React', 'TypeScript', 'SASS', 'Node.js', 'PostgreSQL'],
-      sourceCode: 'https://github.com/bryanwills/sparta-mortgage',
-      livePreview: 'https://spartamortgage.com',
+        'A comprehensive recipe management and meal planning application built with Next.js, TypeScript, and Clerk authentication. Features include personal recipe creation, external recipe discovery via Spoonacular API, recipe saving system, and meal planning capabilities.',
+      stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Clerk', 'Tailwind CSS'],
+      sourceCode: 'https://github.com/bryanwills/mealforge',
+      livePreview: 'https://mealforge-orpin.vercel.app',
       featured: true,
     },
     {
-      name: 'URL2BEN - Smart Bookmark Manager',
+      name: 'BigBrainCoding - AI Learning Platform',
       description:
-        'Developed a comprehensive bookmark management system inspired by Delicious, featuring intelligent categorization, search capabilities, and cross-device synchronization. Built with Django and modern frontend technologies.',
-      stack: ['Python', 'Django', 'React', 'PostgreSQL', 'Redis'],
-      sourceCode: 'https://github.com/bryanwills/URL2BEN',
-      livePreview: 'https://url2ben.bryanwills.dev',
+        'An AI-powered coding education platform that helps developers learn new technologies through interactive tutorials, code examples, and personalized learning paths.',
+      stack: ['React', 'TypeScript', 'AI/ML', 'Node.js', 'MongoDB'],
+      sourceCode: 'https://github.com/bryanwills/bigbraincoding',
+      livePreview: null,
       featured: true,
     },
     {
-      name: 'Frontend Component Library',
+      name: 'Real Estate Agent Website',
       description:
-        'Created a comprehensive collection of reusable React components and design patterns. Includes navigation systems, form components, and interactive elements that can be easily integrated into any project.',
-      stack: ['React', 'TypeScript', 'Storybook', 'Jest', 'SASS'],
-      sourceCode: 'https://github.com/bryanwills/FrontEndWebDevDesigns',
-      livePreview: 'https://components.bryanwills.dev',
+        'A modern, responsive website for real estate agents built with Next.js. Features include property listings, contact forms, and professional presentation of real estate services.',
+      stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+      sourceCode: 'https://github.com/bryanwills/Real-Estate-Agent-Website-NextJS-Stack',
+      livePreview: null,
       featured: false,
     },
     {
-      name: 'Code Louisville Alumni Portal',
+      name: 'Docker Development Environment',
       description:
-        'Built an alumni networking platform for Code Louisville graduates, featuring job boards, mentorship connections, and resource sharing. Contributed to the local tech community growth.',
-      stack: ['React', 'Node.js', 'MongoDB', 'Express', 'Socket.io'],
-      sourceCode: 'https://github.com/bryanwills/code-louisville-alumni',
-      livePreview: 'https://alumni.codelouisville.org',
+        'A comprehensive Docker development environment setup with multiple services, including databases, caching layers, and development tools for full-stack applications.',
+      stack: ['Docker', 'Docker Compose', 'PostgreSQL', 'Redis', 'Nginx'],
+      sourceCode: 'https://github.com/bryanwills/docker',
+      livePreview: null,
+      featured: false,
+    },
+    {
+      name: 'Disney Solana - Web3 Platform',
+      description:
+        'A Web3 platform built on Solana blockchain featuring Disney-themed NFTs, marketplace functionality, and blockchain integration for digital collectibles.',
+      stack: ['Solana', 'Web3', 'React', 'TypeScript', 'Blockchain'],
+      sourceCode: 'https://github.com/bryanwills/disneysolana.com',
+      livePreview: null,
+      featured: false,
+    },
+    {
+      name: 'CasePrep - Interview Preparation',
+      description:
+        'An interview preparation platform designed to help candidates practice case studies, technical questions, and behavioral interviews with comprehensive feedback and scoring.',
+      stack: ['React', 'Node.js', 'MongoDB', 'Express', 'Authentication'],
+      sourceCode: 'https://github.com/bryanwills/caseprep',
+      livePreview: null,
       featured: false,
     },
   ],
@@ -62,112 +80,97 @@ export const portfolio: Portfolio = {
     {
       name: 'React',
       icon: 'react',
-      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+      githubRepos: ['mealforge', 'bigbraincoding', 'Real-Estate-Agent-Website-NextJS-Stack', 'disneysolana.com', 'caseprep']
     },
     {
       name: 'TypeScript',
       icon: 'typescript',
-      githubRepos: ['sparta-mortgage', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+      githubRepos: ['mealforge', 'bigbraincoding', 'Real-Estate-Agent-Website-NextJS-Stack', 'disneysolana.com', 'caseprep']
     },
     {
       name: 'Node.js',
       icon: 'nodejs',
-      githubRepos: ['sparta-mortgage', 'code-louisville-alumni']
+      githubRepos: ['bigbraincoding', 'caseprep']
     },
     {
-      name: 'Python',
-      icon: 'python',
-      githubRepos: ['URL2BEN']
-    },
-    {
-      name: 'Django',
-      icon: 'django',
-      githubRepos: ['URL2BEN']
+      name: 'Next.js',
+      icon: 'nextjs',
+      githubRepos: ['mealforge', 'Real-Estate-Agent-Website-NextJS-Stack']
     },
     {
       name: 'PostgreSQL',
       icon: 'postgresql',
-      githubRepos: ['sparta-mortgage', 'URL2BEN']
+      githubRepos: ['mealforge', 'docker']
     },
     {
       name: 'MongoDB',
       icon: 'mongodb',
-      githubRepos: ['code-louisville-alumni']
-    },
-    {
-      name: 'AWS',
-      icon: 'aws',
-      githubRepos: ['sparta-mortgage', 'URL2BEN']
+      githubRepos: ['bigbraincoding', 'caseprep']
     },
     {
       name: 'Docker',
       icon: 'docker',
-      githubRepos: ['sparta-mortgage', 'URL2BEN']
+      githubRepos: ['docker', 'mealforge']
     },
     {
       name: 'Git',
       icon: 'git',
-      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+      githubRepos: ['mealforge', 'bigbraincoding', 'Real-Estate-Agent-Website-NextJS-Stack', 'docker', 'disneysolana.com', 'caseprep']
     },
     {
       name: 'CI/CD',
       icon: 'github',
-      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+      githubRepos: ['mealforge', 'bigbraincoding', 'Real-Estate-Agent-Website-NextJS-Stack', 'docker', 'disneysolana.com', 'caseprep']
     },
     {
       name: 'REST APIs',
       icon: 'api',
-      githubRepos: ['sparta-mortgage', 'URL2BEN', 'code-louisville-alumni']
+      githubRepos: ['mealforge', 'bigbraincoding', 'caseprep']
     },
     {
-      name: 'GraphQL',
-      icon: 'graphql',
-      githubRepos: ['sparta-mortgage']
+      name: 'Tailwind CSS',
+      icon: 'tailwind',
+      githubRepos: ['mealforge', 'Real-Estate-Agent-Website-NextJS-Stack']
     },
     {
-      name: 'SASS/SCSS',
-      icon: 'sass',
-      githubRepos: ['sparta-mortgage', 'FrontEndWebDevDesigns']
+      name: 'Prisma',
+      icon: 'prisma',
+      githubRepos: ['mealforge']
     },
     {
-      name: 'Jest',
-      icon: 'jest',
-      githubRepos: ['FrontEndWebDevDesigns', 'sparta-mortgage']
-    },
-    {
-      name: 'Cypress',
-      icon: 'cypress',
-      githubRepos: ['sparta-mortgage', 'URL2BEN']
+      name: 'Express.js',
+      icon: 'express',
+      githubRepos: ['bigbraincoding', 'caseprep']
     },
   ],
 
   experience: [
     {
-      company: 'Freelance Developer',
-      position: 'Senior Software Engineer',
-      duration: '2021 - Present',
-      description: 'Building scalable web applications and providing technical consulting for startups and established businesses.',
+      company: 'Big Brain Coding',
+      position: 'Founder/CEO',
+      duration: '2023 - Present',
+      description: 'Founded and leading an AI-powered coding education platform that helps developers learn new technologies through interactive tutorials and personalized learning paths.',
       achievements: [
-        'Led development of 5+ client projects with 100% client satisfaction',
-        'Improved application performance by 40% on average',
-        'Mentored junior developers and conducted code reviews'
+        'Built and launched bigbraincoding.com platform',
+        'Developed AI-powered learning algorithms for personalized education',
+        'Created comprehensive curriculum covering modern web technologies'
       ]
     },
     {
       company: 'Code Louisville',
-      position: 'Frontend Development Instructor',
-      duration: '2020 - 2021',
-      description: 'Taught modern web development practices to aspiring developers in the Louisville community.',
+      position: 'Student',
+      duration: '2020 - 2022',
+      description: 'Completed comprehensive web development training program covering modern frontend and backend technologies.',
       achievements: [
-        'Graduated 50+ students with 85% employment rate',
-        'Developed comprehensive curriculum covering React, TypeScript, and modern CSS',
-        'Created hands-on projects that mirror real-world development scenarios'
+        'Graduated with proficiency in React, TypeScript, and modern CSS',
+        'Completed hands-on projects that mirror real-world development scenarios',
+        'Developed strong foundation in full-stack web development'
       ]
     }
   ],
 
   contact: {
-    email: 'bryan@bryanwills.dev',
+    email: 'bryanwi09@gmail.com',
     location: 'Louisville, KY',
     availability: 'Available for new opportunities',
   },
@@ -176,28 +179,28 @@ export const portfolio: Portfolio = {
     username: 'bryanwills',
     recentRepos: [
       {
-        name: 'sparta-mortgage',
-        description: 'Modern React-based mortgage platform',
+        name: 'mealforge',
+        description: 'Comprehensive recipe management and meal planning application',
         language: 'TypeScript',
-        stars: 12,
-        forks: 3,
-        lastUpdated: '2024-01-15'
+        stars: 0,
+        forks: 0,
+        lastUpdated: '2025-01-15'
       },
       {
-        name: 'URL2BEN',
-        description: 'Smart bookmark management system',
-        language: 'Python',
-        stars: 8,
-        forks: 2,
-        lastUpdated: '2024-01-10'
+        name: 'bigbraincoding',
+        description: 'AI-powered coding education platform',
+        language: 'TypeScript',
+        stars: 0,
+        forks: 0,
+        lastUpdated: '2025-01-10'
       },
       {
-        name: 'FrontEndWebDevDesigns',
-        description: 'Component library and design patterns',
+        name: 'Real-Estate-Agent-Website-NextJS-Stack',
+        description: 'Modern real estate agent website built with Next.js',
         language: 'TypeScript',
-        stars: 15,
-        forks: 5,
-        lastUpdated: '2024-01-20'
+        stars: 0,
+        forks: 0,
+        lastUpdated: '2025-01-12'
       }
     ]
   }

@@ -25,14 +25,14 @@ export default function About() {
               </h2>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-lg-xl text-muted-foreground leading-relaxed max-w-2xl">
               {about.description}
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg">
-                <a href={about.resume} target="_blank" rel="noopener noreferrer">
-                  View Resume
+                <a href="/Bryan_Wills_Resume_2025.pdf" target="_blank" rel="noopener noreferrer">
+                  Download Resume
                 </a>
               </Button>
             </div>

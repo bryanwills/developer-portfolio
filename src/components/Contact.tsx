@@ -3,6 +3,7 @@
 import { portfolio } from '@/data/portfolio'
 import { Button } from './ui/button'
 import { Mail, MapPin, Clock } from 'lucide-react'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
   const { contact } = portfolio
@@ -21,7 +22,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-foreground">
@@ -48,9 +49,7 @@ export default function Contact() {
                 </div>
               )}
             </div>
-          </div>
 
-          <div className="text-center space-y-6">
             <div className="space-y-4">
               <Button asChild size="lg" className="w-full max-w-xs">
                 <a href={`mailto:${contact.email}`}>
@@ -67,6 +66,10 @@ export default function Contact() {
             <div className="text-sm text-muted-foreground">
               <p>I typically respond within 24 hours</p>
             </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <ContactForm />
           </div>
         </div>
       </div>

@@ -5,18 +5,15 @@ import {
   SiReact,
   SiTypescript,
   SiNodedotjs,
-  SiPython,
-  SiDjango,
+  SiNextdotjs,
   SiPostgresql,
   SiMongodb,
-  SiAmazon,
   SiDocker,
   SiGit,
   SiGithub,
-  SiJest,
-  SiCypress,
-  SiSass,
-  SiGraphql
+  SiTailwindcss,
+  SiPrisma,
+  SiExpress
 } from 'react-icons/si'
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
@@ -32,18 +29,15 @@ export default function Skills() {
       react: SiReact,
       typescript: SiTypescript,
       nodejs: SiNodedotjs,
-      python: SiPython,
-      django: SiDjango,
+      nextjs: SiNextdotjs,
       postgresql: SiPostgresql,
       mongodb: SiMongodb,
-      aws: SiAmazon,
       docker: SiDocker,
       git: SiGit,
       github: SiGithub,
-      jest: SiJest,
-      cypress: SiCypress,
-      sass: SiSass,
-      graphql: SiGraphql,
+      tailwind: SiTailwindcss,
+      prisma: SiPrisma,
+      express: SiExpress,
       api: ExternalLink,
       cid: SiGithub
     }
@@ -67,12 +61,12 @@ export default function Skills() {
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
             Skills & Technologies
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg-xl text-muted-foreground max-w-2xl mx-auto">
             Technologies and tools I use to build amazing applications
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => {
             const IconComponent = getIcon(skill.icon)
             const projectLinks = getProjectLinks(skill.name)
@@ -87,13 +81,13 @@ export default function Skills() {
                     <IconComponent className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
                   </div>
                   <div className="space-y-3">
-                    <p className="font-medium text-sm group-hover:text-primary transition-colors">
+                    <p className="font-medium text-base group-hover:text-primary transition-colors">
                       {skill.name}
                     </p>
 
                     {projectLinks.length > 0 && (
                       <div className="space-y-2">
-                        <p className="text-xs text-muted-foreground">Featured in:</p>
+                        <p className="text-sm text-muted-foreground">Featured in:</p>
                         <div className="flex flex-wrap gap-1 justify-center">
                           {projectLinks.map((project, idx) => (
                             <Button

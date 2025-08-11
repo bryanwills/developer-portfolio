@@ -23,9 +23,9 @@ export default function GitHubActivity() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {githubActivity.recentRepos.map((repo, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 flex flex-col h-full">
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between">
                   <div className="space-y-2">
@@ -40,8 +40,8 @@ export default function GitHubActivity() {
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1 min-h-[3rem]">
                   {repo.description}
                 </p>
 
@@ -62,17 +62,19 @@ export default function GitHubActivity() {
                   </div>
                 </div>
 
-                <Button asChild size="sm" className="w-full">
-                  <a
-                    href={`https://github.com/${githubActivity.username}/${repo.name}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <Github className="h-4 w-4" />
-                    View Repository
-                  </a>
-                </Button>
+                <div className="pt-4">
+                  <Button asChild size="sm" className="w-full justify-center">
+                    <a
+                      href={`https://github.com/${githubActivity.username}/${repo.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 w-full justify-center"
+                    >
+                      <Github className="h-4 w-4" />
+                      View Repository
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}

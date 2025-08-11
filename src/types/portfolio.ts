@@ -20,7 +20,7 @@ export interface Project {
   description: string
   stack: string[]
   sourceCode: string
-  livePreview: string
+  livePreview: string | null
   featured: boolean
 }
 
