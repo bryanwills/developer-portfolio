@@ -1,13 +1,15 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { Mail, Send, CheckCircle } from 'lucide-react'
+import { Mail, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,31 +26,33 @@ export default function ContactForm() {
     setError('')
 
     try {
-      // Using FormSubmit.co - a free service that doesn't require API keys
-      // For production, use: https://formsubmit.co/el/confirm/bryanwi09@gmail.com
-      const response = await fetch('https://formsubmit.co/bryanwi09@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          _subject: `Portfolio Contact: ${formData.subject}`,
-          _captcha: false // Disable captcha for simplicity
-        })
-      })
+      // Option 1: EmailJS (fully configured)
+      if (process.env.NODE_ENV === 'production') {
 
-      if (response.ok) {
+        const result = await emailjs.sendForm(
+          'service_anhdofd', // Your actual service ID
+          'template_fv3ilhz', // Your actual template ID
+          formRef.current!,
+          '5le_iJUCD61kkg8fg' // Your actual public key
+        )
+
+        if (result.status === 200) {
+          setIsSubmitted(true)
+          setFormData({ name: '', email: '', subject: '', message: '' })
+        } else {
+          throw new Error('Failed to send message')
+        }
+      } else {
+        // Option 2: Fallback - open email client with pre-filled content
+        const mailtoLink = `mailto:bryanwi09@gmail.com?subject=Portfolio Contact: ${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
+        window.open(mailtoLink)
+
+        // Show success message
         setIsSubmitted(true)
         setFormData({ name: '', email: '', subject: '', message: '' })
-      } else {
-        throw new Error('Failed to send message')
       }
     } catch (err) {
+      console.error('Email error:', err)
       setError('Failed to send message. Please try again or email me directly.')
     } finally {
       setIsSubmitting(false)
@@ -56,9 +60,12 @@ export default function ContactForm() {
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const fieldName = e.target.name === 'user_name' ? 'name' :
+                     e.target.name === 'user_email' ? 'email' :
+                     e.target.name
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [fieldName]: e.target.value
     }))
   }
 
@@ -92,10 +99,10 @@ export default function ContactForm() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Input
-              name="name"
+              name="user_name"
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
@@ -106,7 +113,7 @@ export default function ContactForm() {
 
           <div className="space-y-2">
             <Input
-              name="email"
+              name="user_email"
               type="email"
               placeholder="Your Email"
               value={formData.email}
