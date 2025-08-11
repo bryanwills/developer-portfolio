@@ -1,12 +1,58 @@
 .scroll-top {
   position: fixed;
-  bottom: 2em;
-  right: 4em;
-  background-color: transparent;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
 }
 
-@media (max-width: 900px) {
+.scroll-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--clr-primary);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.scroll-top a:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.scroll-top svg {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
   .scroll-top {
-    display: none;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .scroll-top a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .scroll-top svg {
+    font-size: 1.25rem;
   }
 }
