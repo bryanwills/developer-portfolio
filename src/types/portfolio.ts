@@ -38,11 +38,32 @@ export interface Contact {
   availability: string
 }
 
+export interface Skill {
+  name: string
+  icon: string
+  githubRepos: string[]
+}
+
+export interface GitHubRepo {
+  name: string
+  description: string
+  language: string
+  stars: number
+  forks: number
+  lastUpdated: string
+}
+
+export interface GitHubActivity {
+  username: string
+  recentRepos: GitHubRepo[]
+}
+
 export interface Portfolio {
   header: Header
   about: About
   projects: Project[]
-  skills: string[]
+  skills: Skill[]
   experience: Experience[]
   contact: Contact
+  githubActivity: GitHubActivity
 }

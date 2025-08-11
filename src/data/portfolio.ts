@@ -59,22 +59,86 @@ export const portfolio: Portfolio = {
   ],
 
   skills: [
-    'React',
-    'TypeScript',
-    'Node.js',
-    'Python',
-    'Django',
-    'PostgreSQL',
-    'MongoDB',
-    'AWS',
-    'Docker',
-    'Git',
-    'CI/CD',
-    'REST APIs',
-    'GraphQL',
-    'SASS/SCSS',
-    'Jest',
-    'Cypress',
+    {
+      name: 'React',
+      icon: 'react',
+      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+    },
+    {
+      name: 'TypeScript',
+      icon: 'typescript',
+      githubRepos: ['sparta-mortgage', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+    },
+    {
+      name: 'Node.js',
+      icon: 'nodejs',
+      githubRepos: ['sparta-mortgage', 'code-louisville-alumni']
+    },
+    {
+      name: 'Python',
+      icon: 'python',
+      githubRepos: ['URL2BEN']
+    },
+    {
+      name: 'Django',
+      icon: 'django',
+      githubRepos: ['URL2BEN']
+    },
+    {
+      name: 'PostgreSQL',
+      icon: 'postgresql',
+      githubRepos: ['sparta-mortgage', 'URL2BEN']
+    },
+    {
+      name: 'MongoDB',
+      icon: 'mongodb',
+      githubRepos: ['code-louisville-alumni']
+    },
+    {
+      name: 'AWS',
+      icon: 'aws',
+      githubRepos: ['sparta-mortgage', 'URL2BEN']
+    },
+    {
+      name: 'Docker',
+      icon: 'docker',
+      githubRepos: ['sparta-mortgage', 'URL2BEN']
+    },
+    {
+      name: 'Git',
+      icon: 'git',
+      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+    },
+    {
+      name: 'CI/CD',
+      icon: 'github',
+      githubRepos: ['sparta-mortgage', 'URL2BEN', 'FrontEndWebDevDesigns', 'code-louisville-alumni']
+    },
+    {
+      name: 'REST APIs',
+      icon: 'api',
+      githubRepos: ['sparta-mortgage', 'URL2BEN', 'code-louisville-alumni']
+    },
+    {
+      name: 'GraphQL',
+      icon: 'graphql',
+      githubRepos: ['sparta-mortgage']
+    },
+    {
+      name: 'SASS/SCSS',
+      icon: 'sass',
+      githubRepos: ['sparta-mortgage', 'FrontEndWebDevDesigns']
+    },
+    {
+      name: 'Jest',
+      icon: 'jest',
+      githubRepos: ['FrontEndWebDevDesigns', 'sparta-mortgage']
+    },
+    {
+      name: 'Cypress',
+      icon: 'cypress',
+      githubRepos: ['sparta-mortgage', 'URL2BEN']
+    },
   ],
 
   experience: [
@@ -106,5 +170,35 @@ export const portfolio: Portfolio = {
     email: 'bryan@bryanwills.dev',
     location: 'Louisville, KY',
     availability: 'Available for new opportunities',
+  },
+
+  githubActivity: {
+    username: 'bryanwills',
+    recentRepos: [
+      {
+        name: 'sparta-mortgage',
+        description: 'Modern React-based mortgage platform',
+        language: 'TypeScript',
+        stars: 12,
+        forks: 3,
+        lastUpdated: '2024-01-15'
+      },
+      {
+        name: 'URL2BEN',
+        description: 'Smart bookmark management system',
+        language: 'Python',
+        stars: 8,
+        forks: 2,
+        lastUpdated: '2024-01-10'
+      },
+      {
+        name: 'FrontEndWebDevDesigns',
+        description: 'Component library and design patterns',
+        language: 'TypeScript',
+        stars: 15,
+        forks: 5,
+        lastUpdated: '2024-01-20'
+      }
+    ]
   }
 }

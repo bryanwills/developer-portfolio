@@ -41,6 +41,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#github-activity" className="text-muted-foreground hover:text-primary transition-colors">
+                  GitHub
+                </a>
+              </li>
+              <li>
                 <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </a>
